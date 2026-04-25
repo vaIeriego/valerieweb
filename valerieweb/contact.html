@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | MySite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/contact.css?v=2" />
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <div class="topbar__logo">
+      <a href="about.html" class="topbar__inquire topbar__inquire--left">About</a>
+      <span class="topbar__logo-sub">print designer&#8202;|&#8202;rugs</span>
+    </div>
+    <div class="topbar__sig">
+      <a href="index.html" aria-label="Go to main page">
+        <img src="images/signature.png?v=3" alt="Valerie Gonzalez" class="topbar__sig-img" />
+      </a>
+    </div>
+    <nav class="topbar__nav">
+      <a href="index.html#contact" class="topbar__inquire">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <button class="nav-overlay__close" id="navClose" aria-label="Close menu">✕</button>
+    <ul class="nav-overlay__list">
+      <li><a href="index.html#collection">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="section about about--spacer" style="padding-top: 80px;">
+    <div class="container container--narrow"></div>
+  </section>
+
+  <section class="about-parallax" aria-label="Porous rock parallax image">
+    <div class="about-parallax__panel" aria-hidden="true"></div>
+  </section>
+  <section class="about-olive-bar" aria-hidden="true"></section>
+  <section class="about-olive-bar about-olive-bar--secondary" aria-hidden="true">
+    <div class="about-olive-bar__img"></div>
+  </section>
+
+  <footer class="bottom-bar" aria-label="Footer">
+    <span class="bottom-bar__year">2026</span>
+  </footer>
+
+  <script src="js/image-protect.js?v=1"></script>
+  <script src="js/contact.js?v=1"></script>
+</body>
+</html>

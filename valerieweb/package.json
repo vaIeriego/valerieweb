@@ -1,0 +1,8 @@
+{
+  "name": "valweb",
+  "version": "1.0.0",
+  "description": "Static website",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --open=index.html"
+  }
+}

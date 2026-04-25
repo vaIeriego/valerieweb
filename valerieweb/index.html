@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MySite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=607" />
+</head>
+<body class="page-home">
+
+  <!-- ========== FIXED TOP BAR ========== -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__logo">
+      <a href="about.html" class="topbar__inquire topbar__inquire--left">About</a>
+      <span class="topbar__logo-sub">print designer&#8202;|&#8202;rugs</span>
+    </div>
+    <div class="topbar__sig">
+      <a href="index.html" aria-label="Go to main page">
+        <img src="images/signature.png?v=3" alt="Valerie Gonzalez" class="topbar__sig-img" />
+      </a>
+    </div>
+    <nav class="topbar__nav">
+      <a href="#contact" class="topbar__inquire">Resume</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== SPLIT HERO ==========-->
+  <section class="split">
+
+    <!-- FULL HERO — three rugs -->
+    <div class="split__rugs split__rugs--single" aria-hidden="true">
+      <figure class="split__rug split__rug--single">
+        <img src="images/3%20rugs.png" alt="Layered neutral rugs" />
+      </figure>
+    </div>
+
+    <!-- TITLE — absolute overlay centered across hero -->
+    <div class="text-block" id="textBlock">
+      <h1 class="text-block__title" id="heroTitle"><a href="index.html" class="text-block__title-home" aria-label="VALERIE GONZALEZ">V<span class="kern-after-v">A</span>LERI<span class="kern-after-l">E</span> G<span class="kern-after-g">O</span>NZALEZ</a></h1>
+    </div>
+
+  </section>
+
+  <section class="hero-follow-image" aria-label="Featured image">
+    <img src="images/v_123.png" alt="Featured rug image" />
+    <p class="hero-follow-image__sub">print designer&#8202;|&#8202;rugs</p>
+    <a href="contact.html" class="hero-follow-image__contact">CONTACT</a>
+    <div class="hero-square-carousel" aria-label="Featured square image carousel">
+      <div class="hero-square-carousel__viewport">
+        <div class="hero-square-carousel__track">
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 1" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 2" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 3" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 4" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 5" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 6" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 7" /></article>
+          <article class="hero-square-carousel__item"><img src="images/carousel-square.jpg?v=1" alt="Square featured rug 8" /></article>
+        </div>
+      </div>
+      <div class="hero-square-carousel__controls" aria-hidden="false">
+        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--left" type="button" aria-label="Previous images">&lt;</button>
+        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--right" type="button" aria-label="Next images">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FULL-SCREEN NAV OVERLAY ========== -->
+  <nav class="nav-overlay" id="navOverlay" aria-hidden="true">
+    <button class="nav-overlay__close" id="navClose" type="button" aria-label="Close menu">✕</button>
+    <ul class="nav-overlay__list">
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ========== COLLECTION ========== -->
+  <section id="collection" class="section collection">
+    <div class="portfolio-carousel">
+      <button class="portfolio-arrow portfolio-arrow--left" type="button" aria-label="Previous portfolio card">&lt;</button>
+      <div class="portfolio-viewport">
+    <div class="cards">
+          <a class="card card--project-link" href="projects/nomad-no-01.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&auto=format&fit=crop&crop=top" alt="Nomad rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1693332559291-380f10cd2253?w=800&auto=format&fit=crop&crop=top" alt="Nomad rug alternate view" />
+            </div>
+            <p class="card__label">Nomad No. 01 — Hand-knotted wool, 2023</p>
+          </a>
+          <a class="card card--project-link" href="projects/bloom-no-02.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1581345837712-414b9b6fb450?w=800&auto=format&fit=crop&crop=top" alt="Bloom rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&crop=top" alt="Bloom rug alternate view" />
+            </div>
+            <p class="card__label">Bloom No. 02 — Printed linen, 2024</p>
+          </a>
+          <a class="card card--project-link" href="projects/meridian-no-03.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1693332559291-380f10cd2253?w=800&auto=format&fit=crop&crop=top" alt="Meridian rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=800&auto=format&fit=crop&crop=top" alt="Meridian rug alternate view" />
+            </div>
+            <p class="card__label">Meridian No. 03 — Flat-weave, 2024</p>
+          </a>
+          <a class="card card--project-link" href="projects/soleil-no-04.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&crop=top" alt="Soleil rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1581345837712-414b9b6fb450?w=800&auto=format&fit=crop&crop=top" alt="Soleil rug alternate view" />
+            </div>
+            <p class="card__label">Soleil No. 04 — Tufted wool blend, 2025</p>
+          </a>
+          <a class="card card--project-link" href="projects/atlas-no-05.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1701732824701-ddf4a13fd12a?w=800&auto=format&fit=crop&crop=top" alt="Atlas rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1603484477859-abe6a73f9366?w=800&auto=format&fit=crop&crop=top" alt="Atlas rug alternate view" />
+            </div>
+            <p class="card__label">Atlas No. 05 — Silk-wool blend, 2026</p>
+          </a>
+          <a class="card card--project-link" href="projects/verve-no-06.html">
+            <div class="card__img-wrap">
+              <img class="card__img card__img--base" src="https://images.unsplash.com/photo-1603993097397-89d9d1323c51?w=800&auto=format&fit=crop&crop=top" alt="Verve rug" />
+              <img class="card__img card__img--hover" src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800&auto=format&fit=crop&crop=top" alt="Verve rug alternate view" />
+            </div>
+            <p class="card__label">Verve No. 06 — Hand-tufted wool, 2026</p>
+          </a>
+        </div>
+      </div>
+      <button class="portfolio-arrow portfolio-arrow--right" type="button" aria-label="Next portfolio card">&gt;</button>
+    </div>
+  </section>
+
+  <!-- ========== SECOND SPLIT (UNDER CARDS) ========== -->
+  <section class="split split--secondary" aria-label="Additional split image section">
+    <div class="split__left split__pane">
+      <img
+        class="split__pane-image"
+        src="https://images.unsplash.com/photo-1701732824701-ddf4a13fd12a?w=1600&auto=format&fit=crop&q=80"
+        alt="Patterned rug detail"
+      />
+    </div>
+    <div class="split__right split__pane">
+      <img
+        class="split__pane-image"
+        src="https://images.unsplash.com/photo-1603484477859-abe6a73f9366?w=1600&auto=format&fit=crop&q=80"
+        alt="Woven textile close-up"
+      />
+    </div>
+  </section>
+
+  <section class="selected-cards" aria-label="Selected works cards">
+    <div class="selected-cards__grid">
+      <article class="selected-cards__card">
+        <img
+          src="https://images.unsplash.com/photo-1603993097397-89d9d1323c51?w=900&auto=format&fit=crop&q=80"
+          alt="Hand-tufted rug in neutral tones"
+        />
+      </article>
+      <article class="selected-cards__card">
+        <img
+          src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=900&auto=format&fit=crop&q=80"
+          alt="Textile weave detail"
+        />
+      </article>
+      <article class="selected-cards__card">
+        <img
+          src="https://images.unsplash.com/photo-1701732824701-ddf4a13fd12a?w=900&auto=format&fit=crop&q=80"
+          alt="Patterned rug close-up"
+        />
+      </article>
+    </div>
+  </section>
+
+  <section class="split split--secondary split--tertiary" aria-label="Additional split image section two">
+    <div class="split__left split__pane">
+      <img
+        class="split__pane-image"
+        src="https://images.unsplash.com/photo-1581345837712-414b9b6fb450?w=1600&auto=format&fit=crop&q=80"
+        alt="Printed textile panel"
+      />
+    </div>
+    <div class="split__right split__pane">
+      <img
+        class="split__pane-image"
+        src="https://images.unsplash.com/photo-1693332559291-380f10cd2253?w=1600&auto=format&fit=crop&q=80"
+        alt="Black and white rug texture detail"
+      />
+    </div>
+  </section>
+
+  <section class="recent-extra-carousel" aria-label="Recent projects image carousel">
+    <button class="recent-extra-carousel__arrow recent-extra-carousel__arrow--left" type="button" aria-label="Previous carousel image">&lt;</button>
+    <div class="recent-extra-carousel__viewport">
+      <div class="recent-extra-carousel__track">
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=900&auto=format&fit=crop&crop=entropy&q=80" alt="Recent image 1" /></article>
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1581345837712-414b9b6fb450?w=900&auto=format&fit=crop&q=80" alt="Recent image 2" /></article>
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1693332559291-380f10cd2253?w=900&auto=format&fit=crop&q=80" alt="Recent image 3" /></article>
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop&q=80" alt="Recent image 4" /></article>
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1701732824701-ddf4a13fd12a?w=900&auto=format&fit=crop&q=80" alt="Recent image 5" /></article>
+        <article class="recent-extra-carousel__item"><img src="https://images.unsplash.com/photo-1603484477859-abe6a73f9366?w=900&auto=format&fit=crop&q=80" alt="Recent image 6" /></article>
+      </div>
+    </div>
+    <button class="recent-extra-carousel__arrow recent-extra-carousel__arrow--right" type="button" aria-label="Next carousel image">&gt;</button>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact">
+    <div class="contact__img-wrap">
+      <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=1600&auto=format&fit=crop&crop=entropy&q=80" alt="Persian rug close-up" />
+      <p class="contact__inquire-sub">if you have any questions,<span class="contact__inquire-sub-light">or interest in reaching out,</span></p>
+      <a class="contact__inquire-email" href="mailto:gonzalez@alumni.cooper.edu">Send me an email</a>
+    </div>
+    <span class="contact__under-rule" aria-hidden="true"></span>
+    <div class="contact__bar">
+      <hr class="contact__rule" />
+      <div class="contact__info">
+        <p class="contact__label">Contact</p>
+        <a href="mailto:gonzalez@alumni.cooper.edu" class="contact__email">gonzalez@alumni.cooper.edu</a>
+        <div class="contact__links">
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact__link">LinkedIn</a>
+          <a href="#collection" class="contact__link">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bottom-bar" aria-label="Footer">
+    <span class="bottom-bar__year">2026</span>
+  </footer>
+
+  <script src="js/image-protect.js?v=1"></script>
+  <script src="js/main.js?v=169"></script>
+</body>
+</html>

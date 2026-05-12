@@ -3360,7 +3360,7 @@ body.olive-follow-active .contact__split-right {
   min-width: 0;
 }
 
-.topbar.topbar--split-nav {
+.topbar:has(.topbar__nav-left) {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
@@ -3893,7 +3893,7 @@ body.olive-follow-active .contact__split-right {
 }
 
 @media (max-width: 768px) {
-  .topbar.topbar--split-nav {
+  .topbar:has(.topbar__nav-left) {
     padding: 0.55rem 1rem;
   }
 

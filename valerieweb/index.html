@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Local dev: avoid stale CSS/JS while iterating. -->
+  <!-- Local dev: avoid stale CSS/JS while iterating (use with npm run dev:fresh for no-cache static server). -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <title>MySite</title>
@@ -27,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;family=Montserrat:wght@300;400;500;700&amp;family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1222">
+  <link rel="stylesheet" href="css/styles.css?v=1219">
   <!-- Orange strip: solid fill + measure chip (matches SVG #d35a1a). -->
   <style id="hero-orange-strip">
     #traditional-orange-strip.hero-square-carousel__orange-frame {
@@ -62,7 +62,7 @@
 <body class="page-home nav-scroll-hydrated">
 
   <!-- ========== FIXED TOP BAR ========== -->
-  <header class="topbar is-solid topbar--split-nav" id="topbar">
+  <header class="topbar is-solid" id="topbar">
     <nav class="topbar__nav-left" aria-label="Work">
       <a href="index.html#home" class="topbar__inquire">Rugs</a>
       <a href="#collection" class="topbar__inquire">Collections</a>
@@ -90,7 +90,7 @@
 
     <!-- TITLE — absolute overlay centered across hero -->
     <div class="text-block" id="textBlock">
-      <h1 class="text-block__title is-scroll-proxy-source" id="heroTitle" style="--hero-title-bottom-lift: 48px;"><a href="index.html#home" class="text-block__title-home" aria-label="VALERIE GONZALEZ">V<span class="kern-after-v">A</span>LERI<span class="kern-after-l">E</span> G<span class="kern-after-g">O</span>NZALEZ</a></h1>
+      <h1 class="text-block__title is-scroll-proxy-source" id="heroTitle" style="--hero-title-bottom-lift: 48.00px;"><a href="index.html#home" class="text-block__title-home" aria-label="VALERIE GONZALEZ">V<span class="kern-after-v">A</span>LERI<span class="kern-after-l">E</span> G<span class="kern-after-g">O</span>NZALEZ</a></h1>
     </div>
 
   </section>
@@ -100,7 +100,7 @@
     <p class="hero-follow-image__sub">print designer | rugs</p>
     <a href="contact.html" class="hero-follow-image__contact">CONTACT</a>
     <div class="hero-square-carousel" aria-label="Featured square image carousel">
-      <div class="hero-square-carousel__viewport" aria-busy="false" style="--hero-square-width: 283px;">
+      <div class="hero-square-carousel__viewport" aria-busy="true" style="--hero-square-width: 283px;">
         <div class="hero-square-carousel__track" data-loop-ready="true">
           <article class="hero-square-carousel__item">
             <div class="hero-square-carousel__item-img-wrap">
@@ -209,8 +209,8 @@
           </article></div>
       </div>
       <div class="hero-square-carousel__controls" aria-hidden="false">
-        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--left" type="button" aria-label="Previous images">&lt;</button>
-        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--right" type="button" aria-label="Next images">&gt;</button>
+        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--left" type="button" aria-label="Previous images" disabled="">&lt;</button>
+        <button class="hero-square-carousel__arrow hero-square-carousel__arrow--right" type="button" aria-label="Next images" disabled="">&gt;</button>
       </div>
     </div>
 
@@ -222,10 +222,9 @@
               <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--brown" src="images/kees-rect-brown.svg?v=2" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
             </div>
             <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--yellow" src="images/kees-yellow-square.png?v=1" width="143" height="237" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
-            <div id="traditional-orange-strip" class="hero-square-carousel__orange-frame" title="Traditional orange strip">
+            <div id="traditional-orange-strip" class="hero-square-carousel__orange-frame" title="Rendered 551 × 394 px · target 551 × 394" style="width: 551.276px !important; height: 394.474px !important; max-width: none !important; z-index: 25 !important; background-color: rgb(211, 90, 26) !important;">
               <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--orange" src="images/kees-rect-orange.svg?v=4" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
-              <span class="traditional-orange-strip__measure" aria-hidden="true">551 × 394 px</span>
-            </div>
+            <span class="traditional-orange-strip__measure" aria-hidden="true">551 × 394 px</span></div>
           </div>
         </div>
         <aside class="hero-square-carousel__kees" aria-label="Collection Traditional overview">
@@ -371,7 +370,7 @@
   <!-- ========== COLLECTION ========== -->
   <section id="collection" class="section collection">
     <div class="portfolio-carousel">
-      <button class="portfolio-arrow portfolio-arrow--left" type="button" aria-label="Previous portfolio card">&lt;</button>
+      <button class="portfolio-arrow portfolio-arrow--left" type="button" aria-label="Previous portfolio card" disabled="">&lt;</button>
       <div class="portfolio-viewport">
     <div class="cards">
           <a class="card card--project-link" href="projects/nomad-no-01.html">
@@ -418,7 +417,7 @@
           </a>
         </div>
       </div>
-      <button class="portfolio-arrow portfolio-arrow--right" type="button" aria-label="Next portfolio card">&gt;</button>
+      <button class="portfolio-arrow portfolio-arrow--right" type="button" aria-label="Next portfolio card" disabled="">&gt;</button>
     </div>
   </section>
 
@@ -526,7 +525,7 @@
   </footer>
 
   <script src="js/image-protect.js?v=1"></script>
-  <script src="js/main.js?v=319"></script>
+  <script src="js/main.js?v=318"></script>
   <script src="js/traditional-orange-strip.js?v=990"></script>
 </body>
 </html>

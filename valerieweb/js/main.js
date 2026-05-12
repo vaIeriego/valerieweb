@@ -251,7 +251,9 @@ if (heroSquareViewport && heroSquarePrev && heroSquareNext) {
 }
 
 const topbarHomeLink = document.querySelector('.topbar__sig a[href="index.html"]');
-const topbarResumeLink = document.querySelector('.topbar__nav a[href="#contact"]');
+const topbarResumeLink = document.querySelector(
+  '.topbar__nav a[href="#contact"], .topbar__nav-right a[href="#contact"]'
+);
 if (topbarHomeLink) {
   topbarHomeLink.addEventListener("click", () => {
     window.sessionStorage.removeItem("valerieweb.collectionMode");

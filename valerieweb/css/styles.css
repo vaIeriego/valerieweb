@@ -3454,6 +3454,8 @@ body.olive-follow-active .contact__split-right {
 .hero-square-carousel__diag-stack {
   display: flex;
   justify-content: center;
+  min-height: min(52vw, 340px);
+  align-items: center;
 }
 
 .hero-square-carousel__kees-rects {
@@ -3581,7 +3583,7 @@ body.olive-follow-active .contact__split-right {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
   gap: clamp(1.25rem, 4vw, 3rem);
-  align-items: center;
+  align-items: stretch;
 }
 
 .hero-square-carousel__collection-three,
@@ -3589,29 +3591,37 @@ body.olive-follow-active .contact__split-right {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   gap: clamp(1.25rem, 4vw, 3rem);
-  align-items: center;
+  align-items: stretch;
 }
 
+/* Collection image panels: full-bleed photo with Kees-style shapes layered on top */
 .hero-square-carousel__collection-two-image-wrap,
 .hero-square-carousel__collection-three-image-wrap,
 .hero-square-carousel__collection-four-image-wrap,
 .hero-square-carousel__collection-five-image-wrap {
   position: relative;
   margin: 0;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden;
-  background: #ece8e2;
-  min-height: 220px;
+  background: #2a2622;
+  aspect-ratio: 5 / 6;
+  min-height: min(72vw, 420px);
+  max-height: 560px;
+  width: 100%;
+  align-self: stretch;
 }
 
 .hero-square-carousel__collection-two-image,
 .hero-square-carousel__collection-three-image,
 .hero-square-carousel__collection-four-image,
 .hero-square-carousel__collection-five-image {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  vertical-align: middle;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .hero-square-carousel__collection-two-collage-overlay,
@@ -3619,24 +3629,99 @@ body.olive-follow-active .contact__split-right {
 .hero-square-carousel__collection-four-collage-overlay,
 .hero-square-carousel__collection-five-collage-overlay {
   position: absolute;
-  inset: 8% 6%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 78%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 6% 5%;
+  box-sizing: border-box;
   pointer-events: none;
-  opacity: 0.92;
+  z-index: 3;
+  background: linear-gradient(
+    to top,
+    rgba(12, 10, 9, 0.55) 0%,
+    rgba(12, 10, 9, 0.08) 55%,
+    transparent 100%
+  );
 }
 
-.hero-square-carousel__kees-rects--floral-reference,
-.hero-square-carousel__kees-rects--geo-mod-reference,
-.hero-square-carousel__kees-rects--reni-reference,
-.hero-square-carousel__kees-rects--matisse-reference {
-  transform: scale(0.55);
-  transform-origin: center center;
+.hero-square-carousel__collection-two-collage-overlay .hero-square-carousel__kees-rects,
+.hero-square-carousel__collection-three-collage-overlay .hero-square-carousel__kees-rects,
+.hero-square-carousel__collection-four-collage-overlay .hero-square-carousel__kees-rects,
+.hero-square-carousel__collection-five-collage-overlay .hero-square-carousel__kees-rects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 0;
+  transform: rotate(-2.5deg);
+  transform-origin: left 90%;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.35));
+}
+
+.hero-square-carousel__collection-two-collage-overlay .hero-square-carousel__kees-brown-frame,
+.hero-square-carousel__collection-three-collage-overlay .hero-square-carousel__kees-brown-frame,
+.hero-square-carousel__collection-four-collage-overlay .hero-square-carousel__kees-brown-frame,
+.hero-square-carousel__collection-five-collage-overlay .hero-square-carousel__kees-brown-frame {
+  z-index: 1;
+  margin-right: -0.35rem;
+}
+
+.hero-square-carousel__collection-two-collage-overlay .hero-square-carousel__kees-rect--brown,
+.hero-square-carousel__collection-three-collage-overlay .hero-square-carousel__kees-rect--brown,
+.hero-square-carousel__collection-four-collage-overlay .hero-square-carousel__kees-rect--brown,
+.hero-square-carousel__collection-five-collage-overlay .hero-square-carousel__kees-rect--brown {
+  width: clamp(100px, 22vw, 168px);
+  height: auto;
+  display: block;
+}
+
+/* Yellow rectangle (markup uses empty div in collection overlays) */
+.hero-square-carousel__kees-rect.hero-square-carousel__kees-rect--yellow:empty {
+  width: clamp(64px, 14vw, 108px);
+  aspect-ratio: 143 / 237;
+  flex-shrink: 0;
+  background: #e8c547;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+  margin: 0 0 0 -0.25rem;
+  align-self: flex-end;
 }
 
 .hero-square-carousel__orange-frame--floral-reference,
 .hero-square-carousel__orange-frame--geo-reference,
 .hero-square-carousel__orange-frame--reni-reference,
 .hero-square-carousel__orange-frame--matisse-reference {
-  background: rgba(211, 90, 26, 0.12);
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d35a1a;
+  padding: 4px 8px 10px 6px;
+  margin: 0 0 2px -0.65rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.32);
+}
+
+.hero-square-carousel__orange-frame--floral-reference .hero-square-carousel__kees-rect--orange,
+.hero-square-carousel__orange-frame--geo-reference .hero-square-carousel__kees-rect--orange,
+.hero-square-carousel__orange-frame--reni-reference .hero-square-carousel__kees-rect--orange,
+.hero-square-carousel__orange-frame--matisse-reference .hero-square-carousel__kees-rect--orange {
+  width: clamp(110px, 24vw, 200px);
+  height: auto;
+  display: block;
+}
+
+.hero-square-carousel__collection-two-text,
+.hero-square-carousel__collection-three-text,
+.hero-square-carousel__collection-four-text,
+.hero-square-carousel__collection-five-text {
+  min-width: 0;
+  padding-top: 0.25rem;
 }
 
 #contact.contact .contact__img-wrap {

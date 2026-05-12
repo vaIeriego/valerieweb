@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="layout-no-shrink hero-fouc-pending">
+<html lang="en" class="layout-no-shrink hero-fouc-pending" style="--topbar-spring-start-height: 106px;">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Local dev: avoid stale CSS/JS while iterating. -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
   <title>MySite</title>
   <!-- Sync FOUC guard: base .topbar is off-white in stylesheet; block white strip until JS clears hero-fouc-pending. -->
   <style>
@@ -24,7 +27,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&amp;family=Montserrat:wght@300;400;500;700&amp;family=Playfair+Display:wght@400;500&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=1221">
+  <link rel="stylesheet" href="css/styles.css?v=1222">
   <!-- Orange strip: solid fill + measure chip (matches SVG #d35a1a). -->
   <style id="hero-orange-strip">
     #traditional-orange-strip.hero-square-carousel__orange-frame {
@@ -40,6 +43,19 @@
       opacity: 1 !important;
       visibility: visible !important;
       mix-blend-mode: normal !important;
+    }
+    #traditional-orange-strip .traditional-orange-strip__measure {
+      position: absolute;
+      left: 8px;
+      top: 8px;
+      z-index: 60;
+      font: 600 11px/1.25 ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+      background: rgba(15, 13, 13, 0.94);
+      color: #f6f4ee;
+      padding: 5px 9px;
+      pointer-events: none;
+      letter-spacing: 0.03em;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
     }
   </style>
 </head>
@@ -74,7 +90,7 @@
 
     <!-- TITLE — absolute overlay centered across hero -->
     <div class="text-block" id="textBlock">
-      <h1 class="text-block__title is-scroll-proxy-source" id="heroTitle"><a href="index.html#home" class="text-block__title-home" aria-label="VALERIE GONZALEZ">V<span class="kern-after-v">A</span>LERI<span class="kern-after-l">E</span> G<span class="kern-after-g">O</span>NZALEZ</a></h1>
+      <h1 class="text-block__title is-scroll-proxy-source" id="heroTitle" style="--hero-title-bottom-lift: 48px;"><a href="index.html#home" class="text-block__title-home" aria-label="VALERIE GONZALEZ">V<span class="kern-after-v">A</span>LERI<span class="kern-after-l">E</span> G<span class="kern-after-g">O</span>NZALEZ</a></h1>
     </div>
 
   </section>
@@ -84,7 +100,7 @@
     <p class="hero-follow-image__sub">print designer | rugs</p>
     <a href="contact.html" class="hero-follow-image__contact">CONTACT</a>
     <div class="hero-square-carousel" aria-label="Featured square image carousel">
-      <div class="hero-square-carousel__viewport" aria-busy="false">
+      <div class="hero-square-carousel__viewport" aria-busy="false" style="--hero-square-width: 283px;">
         <div class="hero-square-carousel__track" data-loop-ready="true">
           <article class="hero-square-carousel__item">
             <div class="hero-square-carousel__item-img-wrap">
@@ -205,9 +221,10 @@
             <div class="hero-square-carousel__kees-brown-frame">
               <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--brown" src="images/kees-rect-brown.svg?v=2" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
             </div>
-            <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--yellow" src="images/kees-yellow-square.svg?v=1" width="143" height="237" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
-            <div id="traditional-orange-strip" class="hero-square-carousel__orange-frame">
+            <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--yellow" src="images/kees-yellow-square.png?v=1" width="143" height="237" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+            <div id="traditional-orange-strip" class="hero-square-carousel__orange-frame" title="Traditional orange strip">
               <img class="hero-square-carousel__kees-rect hero-square-carousel__kees-rect--orange" src="images/kees-rect-orange.svg?v=4" alt="" decoding="async" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+              <span class="traditional-orange-strip__measure" aria-hidden="true">551 × 394 px</span>
             </div>
           </div>
         </div>
@@ -239,7 +256,7 @@
           <a class="hero-square-carousel__collection-two-cta" href="#collection">Explore</a>
         </div>
         <figure class="hero-square-carousel__collection-two-image-wrap" aria-hidden="true">
-          <img class="hero-square-carousel__collection-two-image" src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+          <img class="hero-square-carousel__collection-two-image" src="images/collection-2-image-transparent.png" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
           <!-- Reference clone of Traditional collage for aligning to artwork (tune --ref-collage-* on overlay). -->
           <div class="hero-square-carousel__collection-two-collage-overlay">
             <div class="hero-square-carousel__kees-rects hero-square-carousel__kees-rects--floral-reference" aria-hidden="true">
@@ -256,7 +273,7 @@
       </section>
       <section class="hero-square-carousel__collection-three" aria-label="Collection Geo Mod details">
         <figure class="hero-square-carousel__collection-three-image-wrap" aria-hidden="true">
-          <img class="hero-square-carousel__collection-three-image" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+          <img class="hero-square-carousel__collection-three-image" src="images/rousseau-left.png" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
           <div class="hero-square-carousel__collection-three-collage-overlay">
             <div class="hero-square-carousel__kees-rects hero-square-carousel__kees-rects--geo-mod-reference" aria-hidden="true">
               <div class="hero-square-carousel__kees-brown-frame">
@@ -296,7 +313,7 @@
           <a class="hero-square-carousel__collection-four-cta" href="#collection">Explore Collection</a>
         </div>
         <figure class="hero-square-carousel__collection-four-image-wrap" aria-hidden="true">
-          <img class="hero-square-carousel__collection-four-image" src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+          <img class="hero-square-carousel__collection-four-image" src="images/reni-new.png" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
           <div class="hero-square-carousel__collection-four-collage-overlay">
             <div class="hero-square-carousel__kees-rects hero-square-carousel__kees-rects--reni-reference" aria-hidden="true">
               <div class="hero-square-carousel__kees-brown-frame">
@@ -324,7 +341,7 @@
           <a class="hero-square-carousel__collection-five-cta" href="#collection">Explore Collection</a>
         </div>
         <figure class="hero-square-carousel__collection-five-image-wrap" aria-hidden="true">
-          <img class="hero-square-carousel__collection-five-image" src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
+          <img class="hero-square-carousel__collection-five-image" src="images/matisse.png" alt="" draggable="false" style="-webkit-user-drag: none; user-select: none;">
           <div class="hero-square-carousel__collection-five-collage-overlay">
             <div class="hero-square-carousel__kees-rects hero-square-carousel__kees-rects--matisse-reference" aria-hidden="true">
               <div class="hero-square-carousel__kees-brown-frame">
@@ -354,7 +371,7 @@
   <!-- ========== COLLECTION ========== -->
   <section id="collection" class="section collection">
     <div class="portfolio-carousel">
-      <button class="portfolio-arrow portfolio-arrow--left" type="button" aria-label="Previous portfolio card" disabled="">&lt;</button>
+      <button class="portfolio-arrow portfolio-arrow--left" type="button" aria-label="Previous portfolio card">&lt;</button>
       <div class="portfolio-viewport">
     <div class="cards">
           <a class="card card--project-link" href="projects/nomad-no-01.html">
@@ -401,7 +418,7 @@
           </a>
         </div>
       </div>
-      <button class="portfolio-arrow portfolio-arrow--right" type="button" aria-label="Next portfolio card" disabled="">&gt;</button>
+      <button class="portfolio-arrow portfolio-arrow--right" type="button" aria-label="Next portfolio card">&gt;</button>
     </div>
   </section>
 
@@ -456,7 +473,7 @@
   <!-- ========== CONTACT ========== -->
   <section id="contact" class="section contact">
     <div class="contact__img-wrap">
-      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&amp;auto=format&amp;fit=crop&amp;q=80" alt="Interior view with staircase and warm lighting" draggable="false" style="transform: translateY(-110px) scale(1.12); -webkit-user-drag: none; user-select: none;">
+      <img src="images/contact-strip-interior.png?v=1" alt="Interior view with staircase and warm lighting" draggable="false" style="transform: translateY(-110px) scale(1.12); -webkit-user-drag: none; user-select: none;">
       <div class="contact-rug-overlay">
         <form class="contact-rug-form" id="contact-rug-form" action="#" method="post">
           <div class="contact-rug-form__grid">
@@ -510,6 +527,6 @@
 
   <script src="js/image-protect.js?v=1"></script>
   <script src="js/main.js?v=319"></script>
-  <script src="js/traditional-orange-strip.js?v=1"></script>
+  <script src="js/traditional-orange-strip.js?v=990"></script>
 </body>
 </html>
